@@ -1,0 +1,42 @@
+import random
+import math
+import decimal
+i=1
+n=1
+def choose():
+  flag=[]
+  print("s[0]="+str(s[0]))
+  flag.append(1)
+  for i in range (1,31):
+    flag.append(0)
+   while i<=k-1:
+      j=random.randint(0,30)
+      if flag[j]==0:
+      s.append(prime128[j])
+      flag[j]=1
+      print("s["+str(i)+"]="+str(s[i]))
+      i+=1
+x=2**123
+y=2**128
+tmp=0
+prime128=[2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,53,59,61,67,71,73,79,83,89,97,101,103,107,109,113,127]
+k=random.randint(0,15)+5
+print("k="+str(k))
+s=[]
+s.append(2)
+choose()
+for i in range (0,k):
+    n*=s[i]
+while n<x-1:
+    i=random.randint(0,k-1)
+    n*=s[i]
+n=n+1
+print("n="+str(n))
+L=int(math.log2(n))
+for a in range (2,L+1):
+    for i in range (0,k):
+        if pow(a,int((n-1)/p[i]),n)!=1 and pow(a,int(n-1),n)==1:
+            printf("prime")
+            tmp=1       
+if tmp==0:
+    print("composition")
