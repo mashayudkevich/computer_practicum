@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    printf("n: ");
+    int n,i,j;
+    scanf("%d", &n);
+    int a[n],visited[n],l=0,s=0;
+    for(i=0;i<n;i++)visited[i]=0;
+    printf("\nEnter the permutation: ");
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    for(i=0;i<n;i++){
+        if(visited[i]==0){
+            visited[i]=1;
+            l+=1;
+            j=a[i]-1;
+            while(j!=i){
+                visited[j]=1;
+                l+=1;
+                j=a[j]-1;}
+            printf("\nl=%d",l);
+            s=(l%2)+1+s;
+            l=0;}}
+    if(s%2==0)printf("\neven");
+    if(s%2==1)printf("\nodd");
+return 0;}
