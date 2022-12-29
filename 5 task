@@ -1,33 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
-
 int main(){
 int i,n,flag;
-printf("the number of elements in the permutation\n");
+printf("number of elements in the permutation\n");
 scanf("%d",&flag);
-printf("the number of elements in the permutation\n");
+printf("number of elements in the permutation\n");
 scanf("%d",&n);
   if(flag==2){
     int a1[n],a2[n],a12[n];
     printf("enter permutations\n");
-        for(i=0; i<n; i++){
-            scanf("%d", a1+i);}
-        for(i=0; i<n; i++){
-            scanf("%d", a2+i);}
-        for(i=0; i<n; i++){
-            a12[i] = a1[a2[i]-1];}
+        for(i=0;i<n;i++){
+            scanf("%d",a1+i);}
+        for(i=0;i<n;i++){
+            scanf("%d",a2+i);}
+        for(i=0;i<n;i++){
+            a12[i]=a1[a2[i]-1];}
         printf("a12:\n");
-        for(i=0; i<n; i++){
-            printf("%d ", a12[i]);}}
-
-    else{
+        for(i=0;i<n;i++){
+            printf("%d ",a12[i]);}}
+        else{
         int a[n],b[n];
         printf("Enter permutation\n");
-        for(i=0; i<n; i++){
-            scanf("%d", a+i);}
-        for(i=0; i<n; i++){
+        for(i=0;i<n;i++){
+            scanf("%d",a+i);}
+        for(i=0;i<n;i++){
             b[a[i]-1]=i+1;}
         printf("Reverse permutation:\n");
-        for(i=0; i<n; i++){
-            printf("%d ", b[i]);}}
-    return 0;}
+        for(i=0;i<n;i++){
+            printf("%d ",b[i]);}}
+return 0;}
