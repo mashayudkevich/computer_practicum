@@ -1,0 +1,23 @@
+import math
+import random
+def factorial(n):
+ a=1
+ for i in range(1,n+1):
+  a*=i
+  return a
+n=int(input())
+m=int(input())
+j=1
+t=0
+while j<n:
+  s=random.randint(0,m)
+  f=factorial(s)
+  b=pow(j,f)-1
+  b=b%n
+  if math.gcd(b,n)!=1 and math.gcd(b,n)!=n:
+  t=1
+  j=n
+  print(b)
+  j+=1
+if t==0:
+    print(1)
