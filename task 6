@@ -1,0 +1,23 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    int n,i,flag=0;
+
+    printf("the number of elements in the permutation\n");
+    scanf("%d",&n);
+        int a[n];
+        printf("permutation\n");
+        for(i=0; i<n; i++){
+            scanf("%d", a+i);}
+        for(i=0; i<n; i++){
+            if(a[i]!=i+1){
+                flag++;
+                a[a[i]-1] = a[i];
+                a[i] = i+1;}}
+        if(flag%2==0)
+            printf("Even");
+        else
+            printf("Odd");
+
+    return 0;}
