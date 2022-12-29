@@ -1,0 +1,21 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(){
+    printf("n: ");
+    int n,i;
+    scanf("%d", &n);
+    int a[n],b[n],c[n];
+    printf("\nthe first permutation: ");
+    for(i=0;i<n;i++)
+        scanf("%d",&a[i]);
+    printf("\nthe second permutation: ");
+    for(i=0;i<n;i++)
+        scanf("%d",&b[i]);
+    printf("\nComposition: ");
+    for(i=0;i<n;i++)
+        c[i]=a[b[i]-1];
+    for(i=0;i<n;i++)
+        printf("%d ",c[i]);
+return 0;
+}
