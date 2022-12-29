@@ -1,20 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 int main(){
-    int n,i,flag=0;
-    printf("the number of elements in the permutation\n");
-    scanf("%d",&n);
-        int tmp[n];
-        printf("permutation\n");
-        for(i=0;i<n;i++){
-            scanf("%d",tmp+i);}
-        for(i=0;i<n;i++){
-            if(tmp[i]!=i+1){
-                flag++;
-                tmp[tmp[i]-1]=tmp[i];
-                tmp[i]=i+1;}}
-        if(flag%2==0)
-            printf("parity");
-        else
-            printf("not parity");
-return 0;}
+  int n,i,flag=0;
+  printf("the number of elements in the permutation\n");
+  scanf("%d",&n);
+  int tmp[n];
+  printf("enter permutation\n");
+  for(i=0;i<n;i++){
+  scanf("%d",tmp+i);}
+  for(i=0;i<n;i++){
+    if(tmp[i]!=i+1){
+        flag++;
+        tmp[tmp[i]-1]=tmp[i];
+        tmp[i]=i+1;}}
+  if(flag%2!=0)
+    printf("not parity");
+     else
+      printf("parity");
+  return 0;}
