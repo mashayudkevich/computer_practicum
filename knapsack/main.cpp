@@ -2,8 +2,7 @@
 #include <vector>
 #include <algorithm>
  
- 
-int main() {
+ int main() {
     int n, K;
     std::cin >> n >> K;
     std::vector<int> v(n), w(n);
