@@ -1,8 +1,10 @@
-all: main.o
-      g++ main.o -o main
+all: output knapsack.o
+
+output: knapsack.o
+      g++ knapsack.o -o output
       
-main.o: main.cpp
-      g++ -c main.cpp
+knapsack.o: knapsack.cpp
+      g++ -c knapsack.cpp
       
 clean:
-      rm *.o main
+      rm *.o output
