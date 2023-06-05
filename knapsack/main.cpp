@@ -8,8 +8,7 @@ int main() {
     std::cin >> n >> K;
     std::vector<int> v(n), w(n);
     for (int i = 0; i < n; ++i) {
-        std::cin >> v[i] >> w[i];
-    }
+        std::cin >> v[i] >> w[i];}
  
     std::vector<std::vector<int>> dp(n+1, std::vector<int>(K+1, 0));
     for (int i = 1; i <= n; ++i) {
@@ -37,5 +36,4 @@ int main() {
     }
     std::cout << "\n";
  
-    return 0;
-}
+    return 0;}
