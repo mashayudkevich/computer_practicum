@@ -38,8 +38,7 @@ vector<int> solveTSP(const vector<Point>& points) {
 
         visited[next] = true;
         path.push_back(next);
-        current = next;
-    }
+        current = next; }
 
     return path;}
 
