@@ -81,8 +81,7 @@ int main() {
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < V; j++) {
             std::cin >> distances[i * V + j];
-        }
-    }
+        }  }
 
     for (int i = 0; i < N; i++) {
         std::cin >> points[i].x;
